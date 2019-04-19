@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.feyolny.view.CircleRateView
+        android:id="@+id/circleRateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:duration="2000"
+        app:expressColor="#BBBBBB"
+        app:expressSize="18dp"
+        app:expressText="错误率"
+        app:innerCircleColor="#4755E8"
+        app:innerCircleStrokeWidth="1dp"
+        app:outCircleColor="#dbdbdb"
+        app:outCircleStrokeWidth="1dp"
+        app:percentColor="#BBBBBB"
+        app:percentSize="18dp"
+        app:rateColor="#4755E8" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleRateView">
+        <attr name="outCircleColor" format="color" />
+        <attr name="innerCircleColor" format="color" />
+        <attr name="rateColor" format="color" />
+        <attr name="expressColor" format="color" />
+        <attr name="percentColor" format="color" />
+        <attr name="rateSize" format="dimension" />
+        <attr name="expressSize" format="dimension" />
+        <attr name="percentSize" format="dimension" />
+        <attr name="outCircleStrokeWidth" format="dimension" />
+        <attr name="innerCircleStrokeWidth" format="dimension" />
+        <attr name="rateText" format="string" />
+        <attr name="expressText" format="string" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+
+</resources>
