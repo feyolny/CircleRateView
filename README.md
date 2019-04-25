@@ -18,6 +18,25 @@
 	         implementation 'com.github.feyolny:CircleRateView:v1.0.0'
 	     }
  
+ ## Step 3. Use it in your project
+ 
+    <com.feyolny.view.CircleRateView
+        android:id="@+id/circleRateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:duration="2000"
+        app:expressColor="#BBBBBB"
+        app:expressSize="18dp"
+        app:expressText="错误率"
+        app:innerCircleColor="#4755E8"
+        app:innerCircleStrokeWidth="1dp"
+        app:outCircleColor="#dbdbdb"
+        app:outCircleStrokeWidth="1dp"
+        app:percentColor="#BBBBBB"
+        app:percentSize="18dp"
+        app:rateColor="#4755E8" />
+ 
  # Related API
  
   参数 | 描述 
