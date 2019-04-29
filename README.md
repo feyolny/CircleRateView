@@ -15,7 +15,7 @@
 ## Step 2. Add the dependency
  
     dependencies {
-	         implementation 'com.github.feyolny:CircleRateView:v1.0.0'
+	         implementation 'com.github.feyolny:CircleRateView:v1.0.1'
 	     }
  
  ## Step 3. Use it in your project
