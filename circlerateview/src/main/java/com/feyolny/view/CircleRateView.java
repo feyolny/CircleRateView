@@ -157,6 +157,9 @@ public class CircleRateView extends View {
         //计算比率所对应的弧度
         sweep = Float.parseFloat(rateText) / 100 * 360;
 
+        //回收typedArray对象，避免OOM
+        typedArray.recycle();
+
         //开启动画
         startAnimation();
     }
