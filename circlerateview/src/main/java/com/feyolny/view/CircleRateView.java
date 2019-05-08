@@ -2,6 +2,7 @@ package com.feyolny.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,6 +12,8 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
+
+import java.math.BigDecimal;
 
 
 /**
@@ -256,16 +259,31 @@ public class CircleRateView extends View {
      * 开启动画
      */
     private void startAnimation() {
-        ValueAnimator valueAnimator = new ValueAnimator().ofFloat(0, sweep);
-        valueAnimator.setDuration(duration);
-        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+        ValueAnimator circleAnimator = new ValueAnimator().ofFloat(0, sweep);
+        circleAnimator.setDuration(duration);
+        circleAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 sweep = (float) animation.getAnimatedValue();
                 invalidate();
             }
         });
-        valueAnimator.start();
+        circleAnimator.start();
+
+        ValueAnimator numAnimator = new ValueAnimator().ofFloat(0, Float.parseFloat(rateText));
+        numAnimator.setDuration(duration);
+        numAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Float rate = (Float) animation.getAnimatedValue();
+                BigDecimal bigDecimal = new BigDecimal(rate);
+                //四舍五入,不要小数
+                bigDecimal = bigDecimal.setScale(0, BigDecimal.ROUND_HALF_UP);
+                rateText = bigDecimal.toString();
+                invalidate();
+            }
+        });
+        numAnimator.start();
     }
 
     /**
