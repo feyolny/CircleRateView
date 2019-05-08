@@ -1,7 +1,7 @@
 # CircleRateView
  带动画的百分比圆形控件
  
- ![image](https://raw.githubusercontent.com/feyolny/RelatedPictureCollection/master/CircleRateView/Video_2019-04-19_172345.gif)
+ ![image](https://raw.githubusercontent.com/feyolny/RelatedPictureCollection/master/CircleRateView/Video_2019-05-08_174957.gif)
 
 # How do you use it in your project?
 ## Step 1. Add the JitPack repository to your build file
@@ -15,7 +15,7 @@
 ## Step 2. Add the dependency
  
     dependencies {
-	         implementation 'com.github.feyolny:CircleRateView:v1.0.1'
+	         implementation 'com.github.feyolny:CircleRateView:v1.0.2'
 	     }
  
  ## Step 3. Use it in your project
